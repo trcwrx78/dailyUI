@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <section class="signup">
+        <div class="signup__container">
+          <div class="signup__cta">
+            <h4>Barktoberfest 2023</h4>
+            <h2>Walk-a-thon</h2>
+            <p>
+              Join us for a stroll with some adorable pups! Reserve your slot
+              now — they're filling up quickly!
+            </p>
+          </div>
+          <div class="signup__form">
+            <form id="signupForm" action="/submit" method="post">
+              <label for="name">Name:</label>
+              <input type="text" name="name" id="name" required />
+              <label for="email">Email:</label>
+              <input type="email" name="email" id="email" required />
+              <label for="hours">Time Slots:</label>
+              <div class="signup__select">
+                <select>
+                  <option value="10" selected>10:00AM</option>
+                  <option value="11">11:00AM</option>
+                  <option value="12">12:00AM</option>
+                </select>
+              </div>
+
+              <input type="submit" value="Sign Up" />
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

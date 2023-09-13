@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&display=swap');
+
+:root {
+  --light-shade: #ecece4;
+  --light-accent: #b9904a;
+  --main-brand-color: #6fa2b6;
+  --dark-accent: #995438;
+  --dark-shade: #2e3556;
+  --main-font-color: #0f1015;
+
+  --shadow: 0 16px 38px -12px rgba(0, 0, 0, 0.56),
+    0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  font-size: clamp(1.3rem, 1.1vw, 1.9rem);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -webkit-text-size-adjust: 100%;
+  color: var(--main-font-color);
+  background-color: var(--dark-shade);
+}
+
+main {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h2 {
+  font-size: clamp(3rem, 23vw, 3.8rem);
+  font-weight: 600;
+  color: var(--dark-shade);
+}
+
+h4 {
+  font-size: clamp(1.5rem, 1.3vw, 1.9rem);
+  font-weight: 600;
+  color: var(--dark-accent);
+}
+
+form {
+  width: 40rem;
+}
+
+input {
+  font-size: clamp(1.3rem, 1.1vw, 1.9rem);
+  font-family: inherit;
+  color: inherit;
+  padding: 0.25rem 1rem;
+  margin-bottom: 0.5rem;
+  border-radius: 2px;
+  background-color: var(--light-shade);
+  border: none;
+  border-bottom: 3px solid transparent;
+  width: 90%;
+  display: block;
+  transition: all 0.3s;
+}
+
+input:focus {
+  outline: none;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+  border-bottom: 3px solid var(--main-brand-color);
+}
+
+input:focus:invalid {
+  border-bottom: 3px solid var(--dark-accent);
+}
+
+input::-webkit-input-placeholder {
+  color: var(--dark-accent);
+}
+
+input:placeholder-shown + label {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-4rem);
+}
+
+input[type='submit'] {
+  cursor: pointer;
+  background-color: var(--main-brand-color);
+  color: var(--light-shade);
+  padding: 0.5rem 1.25rem;
+  border: none;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+  box-shadow: var(--shadow);
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+input[type='submit']:hover {
+  background-color: var(--dark-accent);
+  box-shadow: 0 0.8rem 1.6rem rgba(0, 0, 0, 0.2);
+}
+
+input[type='submit']:focus {
+  outline: none;
+  box-shadow: 0 0 1rem var(--main-brand-color);
+}
+
+input[type='submit']:active {
+  transform: scale(0.98);
+  box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.2);
+}
+
+label {
+  display: block;
+  font-size: clamp(1.3rem, 1.1vw, 1.9rem);
+  font-family: inherit;
+  font-weight: 600;
+  color: var(--dark-shade);
+  transition: all 0.3s;
+}
+
+.signup__select {
+  position: relative;
+  display: inline-block;
+  width: 40rem;
+  margin-bottom: 1rem;
+}
+
+select {
+  cursor: pointer;
+  background-color: var(--light-shade);
+  color: var(--dark-shade);
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 2px;
+  appearance: none;
+  font-family: inherit;
+  font-size: clamp(1.3rem, 1.1vw, 1.9rem);
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  width: 90%;
+}
+
+.signup__select:after {
+  content: '\25BC';
+  position: absolute;
+  top: 50%;
+  right: 45px;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: var(--dark-accent);
+}
+
+select:focus {
+  outline: none;
+}
+
+select:active {
+  transform: scale(0.98);
+}
+
+select option {
+  background-color: var(--dark-shade);
+  color: var(--light-shade);
+}
+
+.signup {
+  display: flex;
+  flex-direction: row;
+
+  background: url('images/dog.jpg') no-repeat center center/cover;
+
+  width: 100%;
+  max-width: 90rem;
+  height: 70vh;
+}
+
+.signup__container {
+  align-self: flex-end;
+
+  display: flex;
+
+  width: 100%;
+  height: 22.5rem;
+  padding: 2rem;
+  background-color: var(--light-accent);
+}
+
+.signup__cta {
+  max-width: 45rem;
+}
+
+.signup__form {
+  max-width: 45rem;
+}
